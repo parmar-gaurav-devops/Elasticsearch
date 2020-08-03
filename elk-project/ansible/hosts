@@ -1,0 +1,2 @@
+[elk]
+192.168.43.160    ansible_user=ubuntu

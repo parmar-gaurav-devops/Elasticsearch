@@ -1,0 +1,37 @@
+- name: Elasticsearch with custom configuration
+  hosts: elk
+  roles:
+    - role: elastic.elasticsearch
+  vars:
+    es_data_dirs:
+      - "/opt/elasticsearch/data"
+    es_log_dir: "/opt/elasticsearch/logs"
+    es_config:
+      node.name: "node1"
+      cluster.name: "custom-cluster"
+      discovery.seed_hosts: "localhost:9301"
+      http.port: 9201
+      transport.port: 9301
+      node.data: false
+      node.master: true
+      bootstrap.memory_lock: true
+      xpack.security.authc.realms.file.file1.order: 0
+      xpack.security.authc.realms.native.native1.order: 1
+    es_heap_size: 1g
+    es_api_port: 9201
+    es_api_basic_auth_username: elastic
+    es_api_basic_auth_password: password123
+    es_enable_auto_ssl_configuration: true
+    es_enable_http_ssl: true
+    es_enable_transport_ssl: true
+    es_ssl_keystore: "files/certs/elastic-certificates.p12"
+    es_ssl_keystore_password: ""
+    es_ssl_truststore: "files/certs/elastic-certificates.p12"
+    es_ssl_truststore_password: ""
+    es_ssl_key: "files/certs/elastic-certificates.p12"
+    es_ssl_key_password: ""
+    es_ssl_certificate: "files/certs/elastic-certificates.p12"
+    es_ssl_certificate_authority: ""
+    es_ssl_certificate_path: "{{ es_conf_dir }}/certs"
+    es_ssl_verification_mode: "certificate"
+    es_validate_certs: "yes"
