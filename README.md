@@ -23,6 +23,7 @@ Terraform and Ansible provides reusablity, tracebility and verifyability to solv
 - clone Git repo - https://github.com/parmar-gaurav-devops/Elasticsearch
 - go to directory elk-project
 - run chmod +x bootstrap-elk.sh
+- punch your AWS keys, ssh keys and public IP address in Terraform tfvars.
 - execute ./bootstrap-elk.sh
 
 Default username - elastic and password - password123
