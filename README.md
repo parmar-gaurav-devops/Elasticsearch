@@ -17,7 +17,7 @@ In addition to that Ansible uses Ansible Galaxy to install elastic.elasticsearch
 
 Terraform and Ansible provides reusablity, tracebility and verifyability to solve given problems.
 
-#How to ?  
+##How to ?  
 
 - Install suggested prerequisite
 - clone Git repo - https://github.com/parmar-gaurav-devops/Elasticsearch
