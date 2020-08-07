@@ -8,6 +8,6 @@ aws_region = ""
 
 instance_type = "t3a.medium"
 
-key_path="/home/rancho/.ssh/id_rsa.pub"
+key_path=""
 
 public_ip="/32" # IP address from Elasticsearch server should be accessible
